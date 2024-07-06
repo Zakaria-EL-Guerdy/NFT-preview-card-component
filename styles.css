@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-bg-clr: hsl(217, 54%, 11%);
+  --card-bg-clr: hsl(216, 50%, 16%); 
+  --line-clr: hsl(215, 32%, 27%);
+  --white-clr: hsl(0, 0%, 100%);
+  --main-text-clr: hsl(215, 51%, 70%);
+  --active-text-clr: hsl(178, 100%, 50%);
+}
+
+body{
+  background-color: var(--main-bg-clr);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  color: var(--main-text-clr);
+  overflow-x: hidden;
+  padding: 0 15px;
+}
+
+.card{
+  max-width: 375px;
+  margin: 50px auto;
+  background-color: var(--card-bg-clr);
+  padding: 25px;
+  border-radius: 20px; 
+  display: grid;
+  gap: 20px;
+}
+
+.card__picture{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.card__title{
+  color: var(--white-clr);
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.card__description, .card__creator-name, .card__time-left{
+  font-weight: 300;
+}
+
+.card__flex-group1{
+  display:  flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__divider{
+  border-bottom: 1px solid var(--line-clr);
+}
+
+.card__flex-group2{
+  display:  flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card__price{
+  color: var(--active-text-clr);
+  font-weight: 500;
+}
+
+.card__price::before{
+  content: "";
+  width: 11px;
+  height: 18px;
+  background: url('/images/icon-ethereum.svg');
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.card__time-left::before{
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url('/images/icon-clock.svg');
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.card__creator{
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.car__creator-name--active{
+  color: var(--white-clr);
+}
+
+.card__title:hover{
+  color: var(--active-text-clr);
+  cursor: pointer;
+}
+
+.car__creator-name--active:hover{
+  color: var(--active-text-clr);
+  cursor: pointer;
+}
+
+/* Image Overlay Icon when hover */
+.card__container{
+  position: relative;
+}
+
+.card__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--active-text-clr);
+  border-radius: 20px;
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__overlay:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+div a {
+  text-decoration: none;
+  color: var(--active-text-clr);
+}
+
+div p{
+  text-align: center;
+  margin-top: 0;
+}
