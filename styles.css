@@ -76,7 +76,7 @@ body{
   content: "";
   width: 11px;
   height: 18px;
-  background: url('/images/icon-ethereum.svg');
+  background: url('./images/icon-ethereum.svg');
   display: inline-block;
   margin-right: 7px;
   vertical-align: middle;
@@ -86,7 +86,7 @@ body{
   content: "";
   width: 17px;
   height: 17px;
-  background: url('/images/icon-clock.svg');
+  background: url('./images/icon-clock.svg');
   display: inline-block;
   margin-right: 7px;
   vertical-align: middle;
